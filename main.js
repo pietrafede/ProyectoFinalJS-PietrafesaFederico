@@ -6,20 +6,34 @@ const envioExterior = 6000;
 const retiroPorElLocal = 0;
 
 // Constantes de items
-const item1 = 1000;
-const item2 = 2000;
-const item3 = 1500;
-const item4 = 2500;
-const item5 = 3000;
-const item6 = 5000;
+const items = [
+    { nombre: 'crystal glass', precio: 1000 },
+    { nombre: 'strong iron', precio: 2000 },
+    { nombre: 'drunk silicone', precio: 1500 },
+    { nombre: 'milk shine', precio: 2500 },
+    { nombre: 'deep shine', precio: 3000 },
+    { nombre: 'tussi shine', precio: 5000 }
+];
 
 // Función para reiniciar el programa
 function reiniciarPrograma() {
     location.reload(); // Recargar la página para reiniciar
 }
 
+// Función para mostrar opciones al usuario y validar la selección
+function seleccionarOpcion(mensaje, opciones) {
+    let opcion = prompt(mensaje);
+
+    if (opcion === null || isNaN(opcion) || opcion < 1 || opcion > opciones.length) {
+        alert("Opción incorrecta. Reiniciando programa.");
+        reiniciarPrograma();
+    }
+
+    return parseInt(opcion);
+}
+
 // Ingresar el número del producto
-let producto = prompt(`
+let productoIdx = seleccionarOpcion(`
     Seleccione el número de su producto:
 
     1. crystal glass
@@ -28,16 +42,10 @@ let producto = prompt(`
     4. milk shine
     5. deep shine
     6. tussi shine
-`);
-
-// Validar la opción de producto
-if (producto === null || isNaN(producto) || producto < 1 || producto > 6) {
-    alert("Opción de producto incorrecta. Reiniciando programa.");
-    reiniciarPrograma();
-}
+`, items);
 
 // Ingresar el lugar de envío
-let lugar = prompt(`
+let lugarIdx = seleccionarOpcion(`
     Seleccione donde es el envío:
 
     1. envío CABA
@@ -45,61 +53,28 @@ let lugar = prompt(`
     3. envío interior
     4. envío exterior
     5. retiro por el local
-`);
-
-// Validar la opción de lugar
-if (lugar === null || isNaN(lugar) || lugar < 1 || lugar > 5) {
-    alert("Opción de envío/retiro incorrecta. Reiniciando programa.");
-    reiniciarPrograma();
-}
+`, ["CABA", "AMBA", "interior", "exterior", "local"]);
 
 let total = 0;
 
-// Sumar el costo del producto seleccionado
-switch (producto) {
-    case "1":
-        total += item1;
-        break;
-    
-    case "2":
-        total += item2;
-        break;
-    
-    case "3":
-        total += item3;
-        break;
-        
-    case "4":
-        total += item4;
-        break;
-    
-    case "5":
-        total += item5;
-        break;
-    
-    case "6":
-        total += item6;
-        break;
-}
+// Obtener el costo del producto seleccionado
+total += items[productoIdx - 1].precio;
 
 // Sumar el costo de envío o retiro seleccionado
-switch (lugar) {
-    case "1":
+switch (lugarIdx) {
+    case 1:
         total += envioCaba;
         break;
-    
-    case "2":
+    case 2:
         total += envioAmba;
         break;
-    
-    case "3":
+    case 3:
         total += envioInterior;
         break;
-    case "4":
+    case 4:
         total += envioExterior;
         break;
-    
-    case "5":
+    case 5:
         total += retiroPorElLocal;
         break;
 }
