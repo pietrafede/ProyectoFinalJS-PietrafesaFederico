@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRR.CREW STORE</title>
+    <title>CRR.CREW</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="multimedia/imagenes/logo png.png" type="image/x-icon">
@@ -39,22 +39,15 @@
                 <h1 class="logo">CRR.CREW STORE</h1>
             </header>
             <nav>
-                <ul class="menu">
+                <ul>
                     <li>
-                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
+                        <a class="boton-menu boton-volver" href="./index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
                     </li>
                     <li>
-                        <button id="500ml" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> 500 ml</button>
-                    </li>
-                    <li>
-                        <button id="5litros" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> 5 litros</button>
-                    </li>
-                    <li>
-                        <button id="KitsDeLavado" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Kits de lavado</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        <a class="boton-menu boton-carrito active" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito
                         </a>
                     </li>
                 </ul>
@@ -64,14 +57,34 @@
             </footer>
         </aside>
         <main>
-            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
-            <div id="contenedor-productos" class="contenedor-productos">
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
+                <div id="carrito-productos" class="carrito-productos disabled">
+                </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+
             </div>
         </main>
     </div>
     
     <!-- Scripts al final del body -->
-    <script src="./js/main.js"></script>
+    <script src="./js/carrito.js"></script>
     <script src="./js/menu.js"></script>
 </body>
 </html>
