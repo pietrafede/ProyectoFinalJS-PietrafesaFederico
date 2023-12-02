@@ -1,210 +1,19 @@
-// PRODUCTOS
-const productos = [
-    // 500 ml
-    {
-        id: "Deep Shine Shampoo Frutilla",
-        titulo: "Deep Shine Shampoo Frutilla",
-        imagen: "./Productos/500ml/ShampooF.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1200
-    },
-    {
-        id: "Snow Foam Shampoo",
-        titulo: "Snow Foam Shampoo",
-        imagen: "./Productos/500ml/Snow.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1600
-    },
-    {
-        id: "Deep Shine Shampoo Banana",
-        titulo: "Deep Shine Shampoo Banana",
-        imagen: "./Productos/500ml/ShampooB.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1200
-    },
-    {
-        id: "Drunk Silicone Black Edition",
-        titulo: "Drunk Silicone Black Edition",
-        imagen: "./Productos/500ml/Black.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 6300
-    },
-    {
-        id: "Drunk Silicone Transparente",
-        titulo: "Drunk Silicone Transparente",
-        imagen: "./Productos/500ml/Transparente.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 6100
-    },
-    {
-        id: "Crystal Glass Cleaner",
-        titulo: "Crystal Glass Cleaner",
-        imagen: "./Productos/500ml/Crystal.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1100
-    },
-    {
-        id: "Tussi Shine Quick Detailer",
-        titulo: "Tussi Shine Quick Detailer",
-        imagen: "./Productos/500ml/Tussi.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 2900
-    },
-    {
-        id: "Strong Iron Descontaminant",
-        titulo: "Strong Iron Descontaminant",
-        imagen: "./Productos/500ml/Strong.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1900
-    },
-    {
-        id: "All purpose Cleaner",
-        titulo: "All purpose Cleaner",
-        imagen: "./Productos/500ml/APC.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1800
-    },
-    {
-        id: "Bug Remover Cleaner",
-        titulo: "Bug Remover Cleaner",
-        imagen: "./Productos/500ml/Bug.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 1700
-    },
-    {
-        id: "Milk Shine Interior Conditioner",
-        titulo: "Milk Shine Interior Conditioner",
-        imagen: "./Productos/500ml/Milk.jpg",
-        categoria: {
-            nombre: "500ml",
-            id: "500ml"
-        },
-        precio: 4800
-    },
-    // 5 litros
-    {
-        id: "Bidón Shampoo Deep Shine Frutilla",
-        titulo: "Bidón Shampoo Deep Shine Frutilla",
-        imagen: "./Productos/5Litros/BidónShampoo.jpg",
-        categoria: {
-            nombre: "5litros",
-            id: "5litros"
-        },
-        precio: 6500
-    },
-    {
-        id: "Bidón Tussi Shine Quick Detailer",
-        titulo: "Bidón Tussi Shine Quick Detailer",
-        imagen: "./Productos/5Litros/BidónTussi.jpg",
-        categoria: {
-            nombre: "5litros",
-            id: "5litros"
-        },
-        precio: 17500
-    },
-    {
-        id: "Bidón Strong Iron Descontaminant",
-        titulo: "Bidón Strong Iron Descontaminant",
-        imagen: "./Productos/5Litros/BidónStrong.jpg",
-        categoria: {
-            nombre: "5litros",
-            id: "5litros"
-        },
-        precio: 11100
-    },
-    {
-        id: "Bidón Drunk Silicone Black Edition",
-        titulo: "Bidón Drunk Silicone Black Edition",
-        imagen: "./Productos/5Litros/BidónBlack.jpg",
-        categoria: {
-            nombre: "5litros",
-            id: "5litros"
-        },
-        precio: 46100
-    },
-    {
-        id: "Bidón Drunk Silicone Transparente",
-        titulo: "Bidón Drunk Silicone Transparente",
-        imagen: "./Productos/5Litros/BidónTransparente.jpg",
-        categoria: {
-            nombre: "5litros",
-            id: "5litros"
-        },
-        precio: 45500
-    },
-    // Kits de lavado
-    {
-        id: "Kit de lavado - Inicial Plus",
-        titulo: "Kit de lavado - Inicial Plus",
-        imagen: "./Productos/KitsDeLavado/inicial.jpg",
-        categoria: {
-            nombre: "KitsDeLavado",
-            id: "KitsDeLavado"
-        },
-        precio: 8800
-    },
-    {
-        id: "Kit de lavado - Intermedio Plus",
-        titulo: "Kit de lavado - Intermedio Plus",
-        imagen: "./Productos/KitsDeLavado/intermedio.jpg",
-        categoria: {
-            nombre: "KitsDeLavado",
-            id: "KitsDeLavado"
-        },
-        precio: 11100
-    },
-    {
-        id: "Kit de lavado - Avanzado Plus",
-        titulo: "Kit de lavado - Avanzado Plus",
-        imagen: "./Productos/KitsDeLavado/avanzado.jpg",
-        categoria: {
-            nombre: "KitsDeLavado",
-            id: "KitsDeLavado"
-        },
-        precio: 14100
-    },
-    {
-        id: "Kit de lavado - Premium Plus",
-        titulo: "Kit de lavado - Premium Plus",
-        imagen: "./Productos/KitsDeLavado/premium.jpg",
-        categoria: {
-            nombre: "KitsDeLavado",
-            id: "KitsDeLavado"
-        },
-        precio: 17100
-    }
-];
+let productos = [];
 
+fetch("./js/productos.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Error en la petición: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
+    .catch(error => {
+        console.error("Error al cargar los productos:", error);
+    });
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -212,35 +21,37 @@ const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 
+botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
+    aside.classList.remove("aside-visible");
+}));
 
 function cargarProductos(productosElegidos) {
-
     contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
-
         const div = document.createElement("div");
         div.classList.add("producto");
-        div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-            <div class="producto-detalles">
-                <h3 class="producto-titulo">${producto.titulo}</h3>
-                <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
-            </div>
-        `;
+        div.innerHTML = construirHTMLProducto(producto);
 
         contenedorProductos.append(div);
-    })
+    });
 
     actualizarBotonesAgregar();
 }
 
-cargarProductos(productos);
+function construirHTMLProducto(producto) {
+    return `
+        <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+        <div class="producto-detalles">
+            <h3 class="producto-titulo">${producto.titulo}</h3>
+            <p class="producto-precio">$${producto.precio}</p>
+            <button class="producto-agregar" id="${producto.id}">Agregar</button>
+        </div>
+    `;
+}
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
         botonesCategorias.forEach(boton => boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
 
@@ -253,8 +64,7 @@ botonesCategorias.forEach(boton => {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
         }
-
-    })
+    });
 });
 
 function actualizarBotonesAgregar() {
@@ -277,20 +87,44 @@ if (productosEnCarritoLS) {
 }
 
 function agregarAlCarrito(e) {
-    const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    try {
+        Toastify({
+            text: "Producto agregado",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #4b33a8, #785ce9)",
+                borderRadius: "2rem",
+                textTransform: "uppercase",
+                fontSize: ".75rem"
+            },
+            offset: {
+                x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
 
-    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
-    } else {
-        productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
+        const idBoton = e.currentTarget.id;
+        const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+        if (productoAgregado && productosEnCarrito.some(producto => producto.id === idBoton)) {
+            const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+            productosEnCarrito[index].cantidad++;
+        } else {
+            productoAgregado.cantidad = 1;
+            productosEnCarrito.push(productoAgregado);
+        }
+
+        actualizarNumerito();
+
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    } catch (error) {
+        console.error("Error al agregar al carrito:", error);
     }
-
-    actualizarNumerito();
-
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 function actualizarNumerito() {

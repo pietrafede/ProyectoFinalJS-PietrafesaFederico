@@ -1,0 +1,202 @@
+[
+    {
+        "id": "Deep Shine Shampoo Frutilla",
+        "titulo": "Deep Shine Shampoo Frutilla",
+        "imagen": "./Productos/500ml/ShampooF.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1200
+    },
+    {
+        "id": "Snow Foam Shampoo",
+        "titulo": "Snow Foam Shampoo",
+        "imagen": "./Productos/500ml/Snow.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1600
+    },
+    {
+        "id": "Deep Shine Shampoo Banana",
+        "titulo": "Deep Shine Shampoo Banana",
+        "imagen": "./Productos/500ml/ShampooB.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1200
+    },
+    {
+        "id": "Drunk Silicone Black Edition",
+        "titulo": "Drunk Silicone Black Edition",
+        "imagen": "./Productos/500ml/Black.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 6300
+    },
+    {
+        "id": "Drunk Silicone Transparente",
+        "titulo": "Drunk Silicone Transparente",
+        "imagen": "./Productos/500ml/Transparente.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 6100
+    },
+    {
+        "id": "Crystal Glass Cleaner",
+        "titulo": "Crystal Glass Cleaner",
+        "imagen": "./Productos/500ml/Crystal.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1100
+    },
+    {
+        "id": "Tussi Shine Quick Detailer",
+        "titulo": "Tussi Shine Quick Detailer",
+        "imagen": "./Productos/500ml/Tussi.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 2900
+    },
+    {
+        "id": "Strong Iron Descontaminant",
+        "titulo": "Strong Iron Descontaminant",
+        "imagen": "./Productos/500ml/Strong.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1900
+    },
+    {
+        "id": "All purpose Cleaner",
+        "titulo": "All purpose Cleaner",
+        "imagen": "./Productos/500ml/APC.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1800
+    },
+    {
+        "id": "Bug Remover Cleaner",
+        "titulo": "Bug Remover Cleaner",
+        "imagen": "./Productos/500ml/Bug.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 1700
+    },
+    {
+        "id": "Milk Shine Interior Conditioner",
+        "titulo": "Milk Shine Interior Conditioner",
+        "imagen": "./Productos/500ml/Milk.jpg",
+        "categoria": {
+            "nombre": "500ml",
+            "id": "500ml"
+        },
+        "precio": 4800
+    },
+    {
+        "id": "Bidón Shampoo Deep Shine Frutilla",
+        "titulo": "Bidón Shampoo Deep Shine Frutilla",
+        "imagen": "./Productos/5Litros/BidónShampoo.jpg",
+        "categoria": {
+            "nombre": "5litros",
+            "id": "5litros"
+        },
+        "precio": 6500
+    },
+    {
+        "id": "Bidón Tussi Shine Quick Detailer",
+        "titulo": "Bidón Tussi Shine Quick Detailer",
+        "imagen": "./Productos/5Litros/BidónTussi.jpg",
+        "categoria": {
+            "nombre": "5litros",
+            "id": "5litros"
+        },
+        "precio": 17500
+    },
+    {
+        "id": "Bidón Strong Iron Descontaminant",
+        "titulo": "Bidón Strong Iron Descontaminant",
+        "imagen": "./Productos/5Litros/BidónStrong.jpg",
+        "categoria": {
+            "nombre": "5litros",
+            "id": "5litros"
+        },
+        "precio": 11100
+    },
+    {
+        "id": "Bidón Drunk Silicone Black Edition",
+        "titulo": "Bidón Drunk Silicone Black Edition",
+        "imagen": "./Productos/5Litros/BidónBlack.jpg",
+        "categoria": {
+            "nombre": "5litros",
+            "id": "5litros"
+        },
+        "precio": 46100
+    },
+    {
+        "id": "Bidón Drunk Silicone Transparente",
+        "titulo": "Bidón Drunk Silicone Transparente",
+        "imagen": "./Productos/5Litros/BidónTransparente.jpg",
+        "categoria": {
+            "nombre": "5litros",
+            "id": "5litros"
+        },
+        "precio": 45500
+    },
+    {
+        "id": "Kit de lavado - Inicial Plus",
+        "titulo": "Kit de lavado - Inicial Plus",
+        "imagen": "./Productos/KitsDeLavado/inicial.jpg",
+        "categoria": {
+            "nombre": "KitsDeLavado",
+            "id": "KitsDeLavado"
+        },
+        "precio": 8800
+    },
+    {
+        "id": "Kit de lavado - Intermedio Plus",
+        "titulo": "Kit de lavado - Intermedio Plus",
+        "imagen": "./Productos/KitsDeLavado/intermedio.jpg",
+        "categoria": {
+            "nombre": "KitsDeLavado",
+            "id": "KitsDeLavado"
+        },
+        "precio": 11100
+    },
+    {
+        "id": "Kit de lavado - Avanzado Plus",
+        "titulo": "Kit de lavado - Avanzado Plus",
+        "imagen": "./Productos/KitsDeLavado/avanzado.jpg",
+        "categoria": {
+            "nombre": "KitsDeLavado",
+            "id": "KitsDeLavado"
+        },
+        "precio": 14100
+    },
+    {
+        "id": "Kit de lavado - Premium Plus",
+        "titulo": "Kit de lavado - Premium Plus",
+        "imagen": "./Productos/KitsDeLavado/premium.jpg",
+        "categoria": {
+            "nombre": "KitsDeLavado",
+            "id": "KitsDeLavado"
+        },
+        "precio": 17100
+    }
+]
